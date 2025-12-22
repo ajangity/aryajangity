@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Humanoid Robotic Hand | Arya Jangity</title>
+  <title>Custom 3D Printer | Arya Jangity</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 
@@ -17,43 +17,154 @@
   </div>
 </nav>
 
-<main class="project-page fade-in" style="max-width:900px; margin:4rem auto; padding:0 2rem;">
-  <h1>Humanoid Robotic Hand</h1>
+<main class="project-page" style="max-width:900px; margin:4rem auto; padding:0 2rem;">
+
+  <h1>Custom-Built & Modified 3D Printer</h1>
   <p class="project-subtitle">
-    Dexterous humanoid manipulation research — UCSC Slugbotics
+    Mechanical, thermal, and process optimizations to improve print quality,
+    reliability, and development speed
   </p>
 
+  <!-- OVERVIEW -->
   <section>
-    <h2>Problem Statement</h2>
+    <h2>Overview & Motivation</h2>
     <p>
-      Designing a humanoid hand capable of dexterous manipulation presents challenges
-      in kinematic complexity, sensing fidelity, and control precision.
+      3D printers are powerful tools because they allow anyone to create unique,
+      custom parts on demand. However, they also come with major limitations:
+      long print times, inconsistent quality, and reliability issues when
+      trying to iterate quickly.
+    </p>
+    <p>
+      I modified my printer to directly address these issues, focusing on
+      reducing warping, improving surface quality, shortening iteration time,
+      and increasing overall reliability during long prints.
+    </p>
+
+    <img src="../assets/images/projects/printer/printer.jpg"
+         alt="Modified 3D printer"
+         style="width:100%; margin:2rem 0; border-radius:12px;">
+  </section>
+
+  <!-- WARPING PROBLEM -->
+  <section>
+    <h2>Solving Print Warping</h2>
+    <p>
+      One of the biggest issues I encountered was warping at the bottom of prints.
+      This is caused by thermal stress from the heated build plate, which is needed
+      for adhesion but can distort parts as they cool.
+    </p>
+    <p>
+      I evaluated two approaches:
+    </p>
+    <ul>
+      <li>Using supports (which increased print time and material usage)</li>
+      <li>Reducing build plate temperature while improving surface adhesion</li>
+    </ul>
+    <p>
+      I chose the second approach to maintain fast iteration speeds without
+      sacrificing part quality.
+    </p>
+
+    <img src="../assets/images/projects/printer/printer-bed.jpg"
+         alt="Fiberglass build plate"
+         style="width:100%; margin:2rem 0; border-radius:12px;">
+  </section>
+
+  <!-- BUILD PLATE MOD -->
+  <section>
+    <h2>Build Plate Upgrade</h2>
+    <p>
+      I replaced the original glass build plate with a fiberglass plate.
+      The rougher surface allows filament to mechanically grip into
+      microscopic crevices, dramatically improving adhesion at lower
+      temperatures.
+    </p>
+    <p>
+      This change eliminated the need for glue, reduced warping, and made
+      part removal easier by allowing the plate to flex instead of prying
+      prints off a rigid glass surface.
     </p>
   </section>
 
+  <!-- NOZZLE SYSTEM -->
   <section>
-    <h2>Mechanical & Kinematic Design</h2>
+    <h2>Interchangeable Nozzle System</h2>
     <p>
-      Developed finger linkages and joint layouts inspired by human anatomy to
-      balance dexterity, strength, and compact form factor.
+      The nozzle plays a critical role in print quality and speed. Smaller
+      nozzles produce finer detail but dramatically increase print time,
+      while larger nozzles allow faster prints at the cost of resolution.
+    </p>
+    <p>
+      I modified the printer to support interchangeable nozzles, allowing
+      me to choose the optimal nozzle size depending on the application:
+    </p>
+    <ul>
+      <li>Thin nozzles for high-precision parts</li>
+      <li>Larger nozzles for rapid prototyping and structural components</li>
+    </ul>
+
+    <img src="../assets/images/projects/printer/printer-nozzle.jpg"
+         alt="3D printer nozzle"
+         style="width:100%; margin:2rem 0; border-radius:12px;">
+  </section>
+
+  <!-- THERMAL TUNING -->
+  <section>
+    <h2>Thermal Calibration & Material Testing</h2>
+    <p>
+      I performed extensive testing with nozzle temperature to balance print
+      quality, strength, and reliability.
+    </p>
+    <p>
+      Through experimentation, I found <strong>210 °C</strong> to be the optimal
+      printing temperature:
+    </p>
+    <ul>
+      <li>Lower temperatures caused under-extrusion and weak layer bonding</li>
+      <li>Higher temperatures caused stringing and overly glossy surfaces</li>
+    </ul>
+    <p>
+      This tuning significantly improved surface finish and reduced failed prints.
     </p>
   </section>
 
+  <!-- RELIABILITY -->
   <section>
-    <h2>Embedded Control</h2>
+    <h2>Reliability & Print Monitoring</h2>
     <p>
-      Integrated actuators and sensors to enable closed-loop finger control
-      and force-aware grasping strategies.
+      To improve reliability during long prints, I implemented a system that
+      allows me to monitor prints remotely from my computer.
+    </p>
+    <p>
+      I also configured automatic power-loss recovery, allowing the printer
+      to pause a build if power is lost and resume from the exact point where
+      it stopped once power is restored. This prevented multi-day prints from
+      being lost due to brief outages.
     </p>
   </section>
 
+  <!-- RESULTS -->
   <section>
-    <h2>Future Work</h2>
-    <p>
-      Planned extensions include tactile sensing, vision-based grasp planning,
-      and reinforcement-learning-based control methods.
-    </p>
+    <h2>Results</h2>
+    <ul>
+      <li>Significantly reduced warping without supports</li>
+      <li>Improved surface finish and dimensional accuracy</li>
+      <li>Faster iteration through nozzle and thermal optimization</li>
+      <li>Higher success rate on long prints</li>
+    </ul>
   </section>
+
+  <!-- FUTURE -->
+  <section>
+    <h2>What I’d Improve Next</h2>
+    <ul>
+      <li>Enclosed thermal chamber for advanced materials</li>
+      <li>Automated bed leveling with sensor feedback</li>
+      <li>Material-specific print profiles</li>
+      <li>Real-time failure detection using computer vision</li>
+    </ul>
+  </section>
+
 </main>
 
 <script src="../js/main.js"></script>
