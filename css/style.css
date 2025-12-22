@@ -506,3 +506,52 @@ h1, h2, h3, h4,
 .flip-card:hover {
   z-index: 10;
 }
+
+/* =========================
+   EXPERIENCE — DETAILED HOVER REVEAL
+========================= */
+
+/* Give cards room to expand */
+.timeline-item {
+  padding-bottom: 2rem;
+}
+
+/* Stronger expansion on hover */
+.flip-card:hover .card-inner {
+  min-height: 340px;
+}
+
+/* Emphasize back side */
+.card-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Fade out front content slightly on flip */
+.flip-card:hover .card-front {
+  opacity: 0.15;
+  transition: opacity 0.3s ease;
+}
+
+/* Animate back content more clearly */
+.card-back h4,
+.card-back p {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease;
+}
+
+/* Reveal details */
+.flip-card:hover .card-back h4,
+.flip-card:hover .card-back p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Depth + focus */
+.flip-card:hover {
+  z-index: 20;
+}
