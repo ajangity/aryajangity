@@ -21,7 +21,7 @@
 
   <h1>All-Terrain Electric Mountainboard</h1>
   <p class="project-subtitle">
-    High-torque, all-wheel-drive electric skateboard designed to bridge skateboarding,
+    High-torque, all-wheel-drive electric skateboard designed to merge skateboarding,
     hiking, and off-road exploration.
   </p>
 
@@ -29,28 +29,27 @@
   <section>
     <h2>Overview & Motivation</h2>
     <p>
-      As someone who has skateboarded for years while also spending significant time
-      hiking and mountain biking, I wanted to design a platform that combined the
-      agility and freedom of skateboarding with the terrain capability of off-road travel.
+      As someone who loves skateboarding, hiking, and mountain biking, I wanted to build
+      a platform that combined the agility and freedom of a skateboard with the terrain
+      capability of off-road travel.
     </p>
     <p>
-      Traditional electric skateboards perform well on pavement but fail when faced
-      with loose gravel, dirt, roots, rocks, and elevation changes. This project explores
-      what it takes to build a skateboard that can confidently traverse rough terrain
-      while remaining controllable, efficient, and safe.
+      Traditional electric skateboards perform well on pavement but struggle on dirt,
+      gravel, roots, and uneven terrain. This project focuses on solving those limitations
+      through mechanical design, drivetrain architecture, and control systems.
     </p>
   </section>
 
-  <!-- PROBLEM STATEMENT -->
+  <!-- DESIGN CHALLENGES -->
   <section>
-    <h2>Design Challenges</h2>
+    <h2>Key Design Challenges</h2>
     <ul>
-      <li>Maintaining traction across loose and uneven terrain</li>
-      <li>Traversing large obstacles without rider instability</li>
-      <li>Balancing agility with stability at speed</li>
-      <li>Delivering sufficient torque without overheating</li>
-      <li>Achieving long-range battery life for extended rides</li>
-      <li>Ensuring rider safety during aggressive off-road use</li>
+      <li>Maintaining traction on loose and uneven terrain</li>
+      <li>Traversing large obstacles safely</li>
+      <li>Balancing agility with high-speed stability</li>
+      <li>Delivering sustained torque without overheating</li>
+      <li>Achieving long-range battery life</li>
+      <li>Ensuring rider safety during aggressive off-road riding</li>
     </ul>
   </section>
 
@@ -58,110 +57,121 @@
   <section>
     <h2>Mechanical Design & Suspension</h2>
     <p>
-      To address harsh terrain and rider fatigue, I designed a custom suspension system
-      that significantly smooths out impacts from rocks, roots, and uneven surfaces.
-      This allows the board to maintain wheel contact with the ground, improving both
-      comfort and traction.
-    </p>
-    <p>
-      Larger off-road tires with deep treads were selected to roll over obstacles that
-      would stop traditional skateboards entirely. The increased diameter improves
-      obstacle clearance while the tread pattern provides grip on dirt, gravel, and grass.
+      A custom suspension system was designed to smooth impacts from rocks, roots, and
+      uneven surfaces. This allows the wheels to maintain ground contact, improving both
+      ride comfort and traction.
     </p>
 
-    <img src="../assets/images/projects/skateboard/skateboard-suspension-trucks.png"
+    <img src="../assets/images/projects/skateboard/skateboard-suspension-trucks.jpg"
          alt="Suspension truck system"
          style="margin:2rem 0; border-radius:12px;">
 
     <p>
-      Wider trucks were used to increase lateral stability, but they were intentionally
-      tuned looser to preserve a sharp turning radius. This combination allows the board
-      to remain agile while still feeling planted at speed.
+      Large off-road tires with aggressive treads improve obstacle clearance and grip.
+      Wider trucks provide stability, while intentionally looser tuning preserves a
+      sharp turning radius for technical riding.
     </p>
   </section>
 
-  <!-- POWERTRAIN -->
+  <!-- DRIVETRAIN -->
   <section>
     <h2>Drivetrain, Motors & Traction Control</h2>
     <p>
-      The board uses a dual-motor, all-wheel-drive configuration, with each motor
-      controlled by its own dedicated VESC. This architecture enables independent
-      torque control at each wheel.
+      The board uses a dual-motor, all-wheel-drive configuration. Each motor is controlled
+      by its own dedicated VESC, allowing independent torque control per wheel.
     </p>
     <p>
-      By monitoring wheel speed and motor current, the system can reduce or cut power
-      when excessive slip is detected, effectively acting as traction control. This is
-      critical on loose terrain where uncontrolled wheelspin can lead to loss of control
-      or inefficient power usage.
+      This setup enables traction control behavior: when excessive slip is detected,
+      power is reduced or cut to maintain stability and efficiency.
     </p>
 
-    <img src="../assets/images/projects/skateboard/motor-video.png"
-         alt="Motor and drivetrain testing"
-         style="margin:2rem 0; border-radius:12px;">
-
-    <p>
-      This all-wheel-drive setup dramatically improves climbing ability, stability under
-      acceleration, and control during technical riding conditions.
-    </p>
+    <!-- Embedded Video -->
+    <video controls style="width:100%; margin:2rem 0; border-radius:12px;">
+      <source src="../assets/images/projects/skateboard/motor-video.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </section>
 
   <!-- BATTERY -->
   <section>
     <h2>Battery System & Range</h2>
     <p>
-      A high-capacity battery pack was designed and assembled to provide approximately
-      <strong>43 miles of range</strong> under typical riding conditions. Cell selection,
-      configuration, and current handling were optimized to support sustained high torque
-      output without excessive voltage sag.
+      A high-capacity custom battery pack was designed to deliver approximately
+      <strong>43 miles of range</strong>. Cell selection and configuration were optimized
+      for sustained high current draw with minimal voltage sag.
     </p>
 
-    <img src="../assets/images/projects/skateboard/skateboard-battery.png"
+    <img src="../assets/images/projects/skateboard/skateboard-battery.jpg"
          alt="Battery pack"
          style="margin:2rem 0; border-radius:12px;">
 
-    <img src="../assets/images/projects/skateboard/skateboard-battery-building.png"
+    <img src="../assets/images/projects/skateboard/skateboard-battery-building.jpg"
          alt="Battery pack construction"
          style="margin:2rem 0; border-radius:12px;">
+  </section>
+
+  <!-- SYSTEM DIAGRAM -->
+  <section>
+    <h2>High-Level System Architecture</h2>
+    <p>
+      The electrical architecture follows a modular, fault-tolerant design:
+    </p>
+
+    <pre style="background:#f8fafc; padding:1.2rem; border-radius:10px; overflow-x:auto;">
+Battery Pack
+   ↓
+Dual VESCs (Independent Motor Control)
+   ↓
+Front Motor      Rear Motor
+   ↓                 ↓
+Traction Control & Torque Management
+    </pre>
 
     <p>
-      The battery system was designed with serviceability and safety in mind, allowing
-      for inspection, maintenance, and future upgrades.
+      This architecture allows precise control over torque distribution, improving
+      stability, efficiency, and safety across variable terrain.
     </p>
   </section>
 
-  <!-- RIDER SAFETY -->
+  <!-- SAFETY -->
   <section>
     <h2>Rider Safety & Control</h2>
     <p>
-      Off-road riding introduces the risk of foot slippage, especially when traversing
-      uneven or inclined terrain. To address this, the board includes removable foot
-      straps that can be secured during aggressive riding conditions.
-    </p>
-    <p>
-      These straps help keep the rider connected to the board over rough terrain while
-      remaining optional. When riding on smoother surfaces such as pavement, packed dirt,
-      or grass, the straps can be removed to restore a traditional skateboard feel.
+      To prevent foot slippage during aggressive riding, the board includes removable
+      foot straps. These secure the rider on rough terrain while remaining optional for
+      smoother surfaces.
     </p>
 
-    <img src="../assets/images/projects/skateboard/skateboard-building.png"
-         alt="Skateboard assembly and testing"
+    <img src="../assets/images/projects/skateboard/skateboard-building.jpg"
+         alt="Board assembly and testing"
          style="margin:2rem 0; border-radius:12px;">
   </section>
 
-  <!-- RESULTS -->
+  <!-- PERFORMANCE TABLE -->
   <section>
-    <h2>Results & Takeaways</h2>
-    <p>
-      The final system successfully merges the agility of a skateboard with the terrain
-      capability of off-road vehicles. The suspension, AWD drivetrain, traction control,
-      and battery system work together to create a stable, controllable, and highly
-      capable electric mountainboard.
-    </p>
-    <p>
-      This project reinforced the importance of holistic system design — mechanical,
-      electrical, and control decisions are deeply interconnected, especially in
-      high-performance robotics and mobility platforms.
-    </p>
+    <h2>Performance Specifications</h2>
+    <table style="width:100%; border-collapse:collapse;">
+      <tr><td><strong>Drive Configuration</strong></td><td>Dual Motor AWD</td></tr>
+      <tr><td><strong>Range</strong></td><td>~43 miles</td></tr>
+      <tr><td><strong>Top Speed</strong></td><td>~30+ mph (terrain dependent)</td></tr>
+      <tr><td><strong>Motors</strong></td><td>High-torque brushless motors (2×)</td></tr>
+      <tr><td><strong>Motor Controllers</strong></td><td>Independent VESCs</td></tr>
+      <tr><td><strong>Traction Control</strong></td><td>Yes (software-based)</td></tr>
+      <tr><td><strong>Tires</strong></td><td>Large off-road treaded tires</td></tr>
+      <tr><td><strong>Suspension</strong></td><td>Custom shock-based system</td></tr>
+    </table>
+  </section>
+
+  <!-- FUTURE IMPROVEMENTS -->
+  <section>
+    <h2>What I’d Improve Next</h2>
+    <ul>
+      <li>Closed-loop traction estimation using IMU + motor current fusion</li>
+      <li>Regenerative braking optimization for downhill efficiency</li>
+      <li>Waterproofing and sealing for all-weather riding</li>
+      <li>Custom enclosure design to reduce weight and improve serviceability</li>
+      <li>Onboard telemetry logging for performance analysis</li>
+    </ul>
   </section>
 
 </main>
