@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>All-Terrain Electric Skateboard | Arya Jangity</title>
+  <title>All-Terrain Electric Mountainboard | Arya Jangity</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 
@@ -17,11 +17,12 @@
   </div>
 </nav>
 
-<main class="project-page fade-in" style="max-width:900px; margin:4rem auto; padding:0 2rem;">
+<!-- NOTE: fade-in REMOVED to prevent invisible page -->
+<main class="project-page" style="max-width:900px; margin:4rem auto; padding:0 2rem;">
 
   <h1>All-Terrain Electric Mountainboard</h1>
   <p class="project-subtitle">
-    High-torque, all-wheel-drive electric skateboard designed to merge skateboarding,
+    High-torque, rear-wheel-drive electric skateboard designed to merge skateboarding,
     hiking, and off-road exploration.
   </p>
 
@@ -30,13 +31,13 @@
     <h2>Overview & Motivation</h2>
     <p>
       As someone who loves skateboarding, hiking, and mountain biking, I wanted to build
-      a platform that combined the agility and freedom of a skateboard with the terrain
-      capability of off-road travel.
+      a platform that combined the agility of a skateboard with the terrain capability
+      of off-road travel.
     </p>
     <p>
-      Traditional electric skateboards perform well on pavement but struggle on dirt,
-      gravel, roots, and uneven terrain. This project focuses on solving those limitations
-      through mechanical design, drivetrain architecture, and control systems.
+      Traditional electric skateboards excel on pavement but fail on dirt, gravel,
+      roots, and uneven terrain. This project addresses those limitations through
+      mechanical design, drivetrain architecture, and intelligent motor control.
     </p>
   </section>
 
@@ -57,19 +58,18 @@
   <section>
     <h2>Mechanical Design & Suspension</h2>
     <p>
-      A custom suspension system was designed to smooth impacts from rocks, roots, and
-      uneven surfaces. This allows the wheels to maintain ground contact, improving both
-      ride comfort and traction.
+      A custom suspension system smooths impacts from rocks, roots, and uneven surfaces,
+      allowing the wheels to maintain ground contact for improved traction and control.
     </p>
 
     <img src="../assets/images/projects/skateboard/skateboard-suspension-trucks.jpg"
          alt="Suspension truck system"
-         style="margin:2rem 0; border-radius:12px;">
+         style="width:100%; margin:2rem 0; border-radius:12px;">
 
     <p>
-      Large off-road tires with aggressive treads improve obstacle clearance and grip.
-      Wider trucks provide stability, while intentionally looser tuning preserves a
-      sharp turning radius for technical riding.
+      Large treaded tires improve obstacle clearance and grip. Wider trucks increase
+      stability, while intentionally loose tuning preserves a sharp turning radius for
+      technical riding.
     </p>
   </section>
 
@@ -77,17 +77,16 @@
   <section>
     <h2>Drivetrain, Motors & Traction Control</h2>
     <p>
-      The board uses a dual-motor, all-wheel-drive configuration. Each motor is controlled
-      by its own dedicated VESC, allowing independent torque control per wheel.
+      The board uses two rear-mounted motors, each controlled by its own VESC. This
+      enables independent torque control per wheel and software-based traction control.
     </p>
     <p>
-      This setup enables traction control behavior: when excessive slip is detected,
-      power is reduced or cut to maintain stability and efficiency.
+      When excessive slip is detected, power is reduced or cut to maintain stability and
+      efficiency.
     </p>
 
-    <!-- Embedded Video -->
     <video controls style="width:100%; margin:2rem 0; border-radius:12px;">
-      <source src="../assets/images/projects/skateboard/motor-video.mov" type="video/mp4">
+      <source src="../assets/images/projects/skateboard/motor-video.mov">
       Your browser does not support the video tag.
     </video>
   </section>
@@ -96,144 +95,97 @@
   <section>
     <h2>Battery System & Range</h2>
     <p>
-      A high-capacity custom battery pack was designed to deliver approximately
-      <strong>43 miles of range</strong>. Cell selection and configuration were optimized
-      for sustained high current draw with minimal voltage sag.
+      A custom high-capacity battery pack delivers approximately
+      <strong>43 miles of range</strong>, optimized for high current draw with minimal
+      voltage sag.
     </p>
 
     <img src="../assets/images/projects/skateboard/skateboard-battery.jpg"
          alt="Battery pack"
-         style="margin:2rem 0; border-radius:12px;">
+         style="width:100%; margin:2rem 0; border-radius:12px;">
 
     <img src="../assets/images/projects/skateboard/skateboard-battery-building.jpg"
          alt="Battery pack construction"
-         style="margin:2rem 0; border-radius:12px;">
+         style="width:100%; margin:2rem 0; border-radius:12px;">
   </section>
 
-  <!-- SYSTEM DIAGRAM -->
+  <!-- SYSTEM ARCHITECTURE -->
   <section>
     <h2>High-Level System Architecture</h2>
     <p>
-      The electrical architecture follows a modular, fault-tolerant design optimized
-      for high torque delivery, redundancy, and traction control.
+      The electrical system follows a modular, fault-tolerant architecture optimized
+      for torque delivery and traction control.
     </p>
 
     <div style="
-      margin: 2.5rem auto;
-      max-width: 520px;
-      background: #f8fafc;
-      border: 1px solid #e5e7eb;
-      border-radius: 14px;
-      padding: 2rem;
-      text-align: center;
-      font-family: 'Inter', sans-serif;
+      margin:2.5rem auto;
+      max-width:520px;
+      background:#f8fafc;
+      border:1px solid #e5e7eb;
+      border-radius:14px;
+      padding:2rem;
+      text-align:center;
+      font-family:'Inter',sans-serif;
     ">
+      <strong>Battery Pack</strong>
+      <div style="margin:0.6rem 0;">↓</div>
 
-      <div style="font-weight:600; margin-bottom:0.8rem;">
-        Battery Pack
-      </div>
+      <strong>Dual VESCs</strong>
+      <div style="font-size:0.85rem; color:#475569;">Independent motor control</div>
 
-      <div style="font-size:1.4rem; margin:0.4rem 0;">↓</div>
+      <div style="margin:0.6rem 0;">↓</div>
 
-      <div style="font-weight:600; margin-bottom:0.8rem;">
-        Dual VESCs
-        <div style="font-size:0.85rem; color:#475569; font-weight:400;">
-          Independent motor control & current limiting
-        </div>
-      </div>
-
-      <div style="font-size:1.4rem; margin:0.4rem 0;">↓</div>
-
-      <div style="
-        display: flex;
-        justify-content: space-between;
-        gap: 1.2rem;
-        margin-top: 0.5rem;
-      ">
-        <div style="
-          flex: 1;
-          padding: 0.8rem;
-          border: 1px solid #e5e7eb;
-          border-radius: 10px;
-          background: white;
-          font-weight:600;
-        ">
+      <div style="display:flex; gap:1rem;">
+        <div style="flex:1; padding:0.8rem; border:1px solid #e5e7eb; border-radius:10px;">
           Rear Motor (Left)
         </div>
-
-        <div style="
-          flex: 1;
-          padding: 0.8rem;
-          border: 1px solid #e5e7eb;
-          border-radius: 10px;
-          background: white;
-          font-weight:600;
-        ">
+        <div style="flex:1; padding:0.8rem; border:1px solid #e5e7eb; border-radius:10px;">
           Rear Motor (Right)
         </div>
       </div>
 
-      <div style="font-size:1.4rem; margin:0.6rem 0;">↓</div>
+      <div style="margin:0.6rem 0;">↓</div>
 
-      <div style="
-        font-weight:600;
-        padding: 0.8rem;
-        border-radius: 10px;
-        background: #0f172a;
-        color: white;
-      ">
+      <div style="background:#0f172a; color:white; padding:0.8rem; border-radius:10px;">
         Traction Control & Torque Management
-        <div style="font-size:0.85rem; color:#fde68a; font-weight:400;">
-          Slip detection • Power limiting • Stability control
-        </div>
       </div>
     </div>
-
-    <p>
-      This configuration delivers rear-wheel all-wheel-drive behavior with independent
-      torque control at each wheel, improving traction, stability, and efficiency on
-      loose or uneven terrain.
-    </p>
   </section>
 
   <!-- SAFETY -->
   <section>
     <h2>Rider Safety & Control</h2>
     <p>
-      To prevent foot slippage during aggressive riding, the board includes removable
-      foot straps. These secure the rider on rough terrain while remaining optional for
-      smoother surfaces.
+      Removable foot straps secure the rider on rough terrain while remaining optional
+      for smooth surfaces.
     </p>
 
     <img src="../assets/images/projects/skateboard/skateboard-building.jpg"
-         alt="Board assembly and testing"
-         style="margin:2rem 0; border-radius:12px;">
+         alt="Board assembly"
+         style="width:100%; margin:2rem 0; border-radius:12px;">
   </section>
 
-  <!-- PERFORMANCE TABLE -->
+  <!-- PERFORMANCE -->
   <section>
     <h2>Performance Specifications</h2>
     <table style="width:100%; border-collapse:collapse;">
-      <tr><td><strong>Drive Configuration</strong></td><td>Dual Motor AWD</td></tr>
+      <tr><td><strong>Drive</strong></td><td>Dual rear motor AWD</td></tr>
       <tr><td><strong>Range</strong></td><td>~43 miles</td></tr>
-      <tr><td><strong>Top Speed</strong></td><td>~30+ mph (terrain dependent)</td></tr>
-      <tr><td><strong>Motors</strong></td><td>High-torque brushless motors (2×)</td></tr>
-      <tr><td><strong>Motor Controllers</strong></td><td>Independent VESCs</td></tr>
-      <tr><td><strong>Traction Control</strong></td><td>Yes (software-based)</td></tr>
-      <tr><td><strong>Tires</strong></td><td>Large off-road treaded tires</td></tr>
-      <tr><td><strong>Suspension</strong></td><td>Custom shock-based system</td></tr>
+      <tr><td><strong>Top Speed</strong></td><td>~30+ mph</td></tr>
+      <tr><td><strong>Controllers</strong></td><td>Dual VESCs</td></tr>
+      <tr><td><strong>Suspension</strong></td><td>Custom shock-based</td></tr>
     </table>
   </section>
 
-  <!-- FUTURE IMPROVEMENTS -->
+  <!-- FUTURE -->
   <section>
     <h2>What I’d Improve Next</h2>
     <ul>
-      <li>Closed-loop traction estimation using IMU + motor current fusion</li>
-      <li>Regenerative braking optimization for downhill efficiency</li>
-      <li>Waterproofing and sealing for all-weather riding</li>
-      <li>Custom enclosure design to reduce weight and improve serviceability</li>
-      <li>Onboard telemetry logging for performance analysis</li>
+      <li>IMU-based closed-loop traction estimation</li>
+      <li>Regenerative braking optimization</li>
+      <li>Full waterproofing</li>
+      <li>Weight-optimized enclosure</li>
+      <li>Onboard telemetry logging</li>
     </ul>
   </section>
 
