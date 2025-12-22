@@ -18,42 +18,118 @@
 </nav>
 
 <main class="project-page fade-in" style="max-width:900px; margin:4rem auto; padding:0 2rem;">
+
   <h1>Humanoid Robotic Hand</h1>
   <p class="project-subtitle">
-    Dexterous humanoid manipulation research — UCSC Slugbotics
+    Dexterous humanoid manipulation research focused on replicating human hand capability
   </p>
 
+  <!-- HERO IMAGE -->
+  <img
+    src="../assets/images/projects/humanoid-hand/humanoid-hand.jpg"
+    alt="Humanoid robotic hand prototype"
+    style="width:100%; margin:2.5rem 0; border-radius:14px;"
+  >
+
+  <!-- MISSION -->
   <section>
-    <h2>Problem Statement</h2>
+    <h2>Mission & Why This Matters</h2>
     <p>
-      Designing a humanoid hand capable of dexterous manipulation presents challenges
-      in kinematic complexity, sensing fidelity, and control precision.
+      The human hand is one of the most complex and capable tools in existence.
+      It allows us to manipulate objects, feel our environment, and interact
+      with the world in incredibly nuanced ways.
+    </p>
+    <p>
+      Replicating these capabilities in robotic systems is critical for the future
+      of assistive technology, healthcare, manufacturing, and human-robot interaction.
+      A truly dexterous robotic hand could restore independence to amputees, enable
+      robots to safely work alongside humans, and dramatically expand what machines
+      are capable of doing in unstructured environments.
+    </p>
+    <p>
+      This project focuses on understanding and recreating the fundamental mechanics
+      and sensing capabilities that make the human hand so effective.
     </p>
   </section>
 
+  <!-- MECHANICAL GOALS -->
   <section>
-    <h2>Mechanical & Kinematic Design</h2>
+    <h2>Dexterous Motion & Finger Mechanics</h2>
     <p>
-      Developed finger linkages and joint layouts inspired by human anatomy to
-      balance dexterity, strength, and compact form factor.
+      One of the primary challenges in humanoid manipulation is replicating the
+      range of motion present in human fingers. Unlike simple grippers, human
+      hands rely on coordinated finger curling, extension, and splaying to
+      interact with objects of varying shapes and sizes.
+    </p>
+    <p>
+      This project explores mechanical and kinematic approaches to mimic:
+    </p>
+    <ul>
+      <li>Finger curling for grasping and power grips</li>
+      <li>Finger extension for release and repositioning</li>
+      <li>Finger splaying to adapt to wide or irregular objects</li>
+    </ul>
+    <p>
+      The design emphasizes anatomical inspiration while balancing mechanical
+      simplicity, strength, and scalability.
     </p>
   </section>
 
+  <!-- SENSING -->
   <section>
-    <h2>Embedded Control</h2>
+    <h2>Tactile Sensing & Artificial Skin</h2>
     <p>
-      Integrated actuators and sensors to enable closed-loop finger control
-      and force-aware grasping strategies.
+      Human hands do far more than move — they sense. Touch provides critical
+      feedback about force, temperature, and surface texture, allowing us to
+      adjust our grip in real time.
+    </p>
+    <p>
+      A major research direction of this project is the integration of distributed
+      sensing throughout the hand, similar to how human skin functions.
+    </p>
+    <p>
+      Planned sensing capabilities include:
+    </p>
+    <ul>
+      <li>Pressure sensing to detect grip force and contact location</li>
+      <li>Temperature sensing for safe human interaction</li>
+      <li>Surface roughness estimation to identify materials and textures</li>
+    </ul>
+    <p>
+      This sensory feedback will enable more adaptive, compliant, and safe
+      manipulation strategies.
     </p>
   </section>
 
+  <!-- CONTROL -->
   <section>
-    <h2>Future Work</h2>
+    <h2>Control Philosophy</h2>
     <p>
-      Planned extensions include tactile sensing, vision-based grasp planning,
-      and reinforcement-learning-based control methods.
+      True dexterity requires tight integration between mechanics, sensing,
+      and control. The long-term vision for this system is closed-loop,
+      sensor-driven control that continuously adjusts finger motion based
+      on real-world feedback.
+    </p>
+    <p>
+      Rather than relying solely on predefined grasps, the goal is to allow
+      the hand to adapt dynamically to objects, uncertainty, and external
+      disturbances — much like a human would.
     </p>
   </section>
+
+  <!-- FUTURE WORK -->
+  <section>
+    <h2>Future Development & Research Directions</h2>
+    <ul>
+      <li>Refined finger kinematics for increased range of motion</li>
+      <li>High-resolution tactile sensor arrays across fingertips and palm</li>
+      <li>Force-controlled grasping using real-time sensor feedback</li>
+      <li>Integration with vision systems for object-aware manipulation</li>
+      <li>Learning-based grasp optimization using reinforcement learning</li>
+      <li>Application to assistive robotics and humanoid platforms</li>
+    </ul>
+  </section>
+
 </main>
 
 <script src="../js/main.js"></script>
