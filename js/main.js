@@ -34,14 +34,7 @@ document.querySelectorAll('.flip-card').forEach(card => {
     // Only flip if it was a tap, not a scroll
     if (dx < 10 && dy < 10) {
       card.classList.toggle('is-flipped');
+      card.classList.toggle('visible'); // ensure fade-in doesn’t fight flip
     }
-  });
-});
-
-document.querySelectorAll('.flip-card').forEach(card => {
-  card.addEventListener('touchend', () => {
-    document.querySelectorAll('.flip-card').forEach(c => {
-      if (c !== card) c.classList.remove('is-flipped');
-    });
   });
 });
