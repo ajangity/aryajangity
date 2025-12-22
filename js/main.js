@@ -23,3 +23,10 @@ document.querySelectorAll('a').forEach(link => {
     link.style.transition = "all 0.3s ease";
   });
 });
+
+// Enable flip cards on mobile (tap)
+document.querySelectorAll('.flip-card').forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('is-flipped');
+  });
+});
