@@ -2,58 +2,229 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Custom 3D Printer | Arya Jangity</title>
+  <title>BananaPuck | Arya Jangity</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
   <a href="../index.html" class="logo">Arya Jangity</a>
   <div class="nav-links">
-    <a href="../projects/index.html">Projects</a>
+    <a href="../projects/index.html" class="active">Projects</a>
     <a href="../experience.html">Experience</a>
     <a href="../courses.html">Courses</a>
   </div>
 </nav>
 
-<main class="project-page fade-in" style="max-width:900px; margin:4rem auto; padding:0 2rem;">
-  <h1>Custom-Built & Modified 3D Printer</h1>
+<main class="project-page fade-in" style="max-width:1000px; margin:4rem auto; padding:0 2rem;">
+
+  <h1>BananaPuck</h1>
   <p class="project-subtitle">
-    Mechanical redesign, calibration, and print-quality optimization
+    Chest-worn assistive monitoring device for elderly & rehabilitation patients
   </p>
 
+  <!-- OVERVIEW -->
   <section>
     <h2>Overview</h2>
     <p>
-      Stock 3D printers often suffer from vibration, poor tolerances,
-      and inconsistent extrusion performance.
+      BananaPuck is a compact, adhesive wearable designed to continuously monitor
+      physiological signals, movement, and environmental context for elderly individuals
+      and patients recovering from injury or surgery.
+    </p>
+    <p>
+      The system enables early detection of health risks while preserving user independence,
+      extending caregiver awareness beyond clinical environments.
     </p>
   </section>
 
+  <!-- HOW IT WORKS -->
   <section>
-    <h2>Mechanical Upgrades</h2>
+    <h2>How It Works</h2>
     <p>
-      Redesigned structural components, mounts, and motion systems to
-      improve rigidity and positional accuracy.
+      Embedded sensors collect real-time data including heart rate, respiration,
+      temperature, motion, orientation, and GPS location. Data is processed by an
+      onboard microcontroller and transmitted wirelessly to a cloud backend.
+    </p>
+    <p>
+      Caregivers access this information through a web-based dashboard that provides
+      live status, intelligent alerts, and historical trends.
+    </p>
+
+    <p><strong>High-Level Architecture:</strong></p>
+    <p>
+      Sensors → Microcontroller → Wireless Transmission → Server Processing →
+      Caregiver Application
     </p>
   </section>
 
+  <!-- WHY IT MATTERS -->
   <section>
-    <h2>Calibration & Testing</h2>
+    <h2>Why It Matters</h2>
     <p>
-      Performed extensive tuning and test prints to achieve consistent
-      high-quality results across multiple materials.
+      Many medical emergencies are preceded by subtle physiological or behavioral
+      changes that go unnoticed. BananaPuck captures these early indicators, allowing
+      caregivers to intervene before critical events occur.
+    </p>
+    <p>
+      The system balances safety and autonomy by providing continuous monitoring
+      without restricting daily activity.
     </p>
   </section>
 
+  <!-- DASHBOARD -->
   <section>
-    <h2>Applications</h2>
+    <h2>Caregiver Dashboard</h2>
     <p>
-      Fabricated functional components including skateboard parts,
-      mounts, brackets, and custom enclosures.
+      The BananaPuck web dashboard presents live and historical patient data in a
+      clear, actionable format. It is designed for rapid interpretation under
+      high-stress conditions.
+    </p>
+
+    <h3>Live Map & Location Awareness</h3>
+    <p>
+      A real-time map view displays the patient’s current GPS location, enabling
+      fast response in the event of an emergency or fall.
+    </p>
+
+    <h3>Alert System</h3>
+    <p>
+      The alert panel highlights critical events such as detected falls, unsafe
+      heart rates, or prolonged inactivity. Each alert includes timestamps and
+      contextual information to reduce false positives and alert fatigue.
+    </p>
+
+    <h3>Vitals Monitoring</h3>
+    <p>
+      Dedicated cards display heart rate, respiration, and temperature in real time.
+      Visual cues distinguish safe and unsafe ranges for quick assessment.
+    </p>
+
+    <h3>Environmental & Context Data</h3>
+    <p>
+      Additional panels track environmental factors such as water submergence and
+      carbon monoxide exposure, as well as positional confidence from GPS accuracy.
+    </p>
+
+    <!-- Screenshots -->
+    <section>
+      <h2>Caregiver Dashboard</h2>
+      <p>
+        BananaPuck includes a web-based caregiver dashboard designed for fast,
+        intuitive monitoring of patient status in real time.
+      </p>
+
+      <h3>Live Location Map</h3>
+      <p>
+        The dashboard displays the patient’s real-time GPS position on an interactive
+        map, enabling rapid response during emergencies or falls.
+      </p>
+      <img
+        src="../assets/images/projects/bananapuck/ab8f719c-a1c2-4bf9-bdf9-41b057a5f1b2.png"
+        alt="BananaPuck live location map"
+        style="border-radius:12px; margin:1.5rem 0;"
+      >
+
+      <h3>Alerts & Event Tracking</h3>
+      <p>
+        Critical alerts such as fall detection or unsafe heart rate conditions are
+        surfaced immediately, along with timestamps and contextual data to reduce
+        false positives.
+      </p>
+      <img
+        src="../assets/images/projects/bananapuck/0c11fe0d-46f6-403f-a754-9dfeb9becc0f.png"
+        alt="BananaPuck alert system"
+        style="border-radius:12px; margin:1.5rem 0;"
+      >
+
+      <h3>Vitals Monitoring</h3>
+      <p>
+        Heart rate, respiration, and temperature are continuously tracked and displayed
+        using clear visual cards optimized for rapid assessment.
+      </p>
+      <img
+        src="../assets/images/projects/bananapuck/08cf603d-dc3f-46ce-9018-15fbfad606e7.png"
+        alt="BananaPuck vitals dashboard"
+        style="border-radius:12px; margin:1.5rem 0;"
+      >
+
+      <h3>Environment & Context</h3>
+      <p>
+        Environmental awareness includes water submergence detection and carbon monoxide
+        levels, providing additional context for patient safety.
+      </p>
+      <img
+        src="../assets/images/projects/bananapuck/04770c3b-b4be-4a2c-a3a0-4bb946593d89.png"
+        alt="BananaPuck environmental monitoring"
+        style="border-radius:12px; margin:1.5rem 0;"
+      >
+    </section>
+
+
+  </section>
+
+  <!-- SENSOR LOGIC -->
+  <section>
+    <h2>Sensor Fusion & Event Detection</h2>
+    <p>
+      Fall detection is implemented using accelerometer and gyroscope data combined
+      with temporal thresholds and post-event motion analysis.
+    </p>
+    <p>
+      If movement is detected after a fall-like event, alerts are automatically
+      de-escalated to prevent unnecessary caregiver intervention.
     </p>
   </section>
+
+  <!-- POWER -->
+  <section>
+    <h2>Power & Wearability</h2>
+    <p>
+      BananaPuck is designed to be lightweight, unobtrusive, and comfortable for
+      extended wear. Firmware scheduling and sensor polling are optimized to
+      maximize battery life while maintaining continuous monitoring.
+    </p>
+  </section>
+
+  <!-- SLIDES -->
+  <section>
+    <h2>Project Presentation</h2>
+    <p>
+      The following presentation provides a deeper technical and design overview
+      of BananaPuck, including system architecture, design decisions, and future
+      development plans.
+    </p>
+
+    <iframe
+      src="https://docs.google.com/presentation/d/1iPxznw8ZBjy-CZNE5HYnjlmBnUbG2RpW6KQUh2FTrd8/embed?start=false&loop=false&delayms=3000"
+      frameborder="0"
+      width="100%"
+      height="480"
+      allowfullscreen="true"
+      mozallowfullscreen="true"
+      webkitallowfullscreen="true"
+      style="border-radius:12px; margin-top:1rem;"
+    ></iframe>
+  </section>
+
+  <!-- FUTURE -->
+  <section>
+    <h2>Future Work</h2>
+    <ul>
+      <li>Expanded physiological sensing</li>
+      <li>Machine-learning-based activity classification</li>
+      <li>Predictive fall-risk modeling</li>
+      <li>Clinical trials and user feedback integration</li>
+    </ul>
+  </section>
+
 </main>
 
 <script src="../js/main.js"></script>
