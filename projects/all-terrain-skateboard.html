@@ -114,22 +114,85 @@
   <section>
     <h2>High-Level System Architecture</h2>
     <p>
-      The electrical architecture follows a modular, fault-tolerant design:
+      The electrical architecture follows a modular, fault-tolerant design optimized
+      for high torque delivery, redundancy, and traction control.
     </p>
 
-    <pre style="background:#f8fafc; padding:1.2rem; border-radius:10px; overflow-x:auto;">
-Battery Pack
-   ↓
-Dual VESCs (Independent Motor Control)
-   ↓
-Front Motor      Rear Motor
-   ↓                 ↓
-Traction Control & Torque Management
-    </pre>
+    <div style="
+      margin: 2.5rem auto;
+      max-width: 520px;
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 2rem;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+    ">
+
+      <div style="font-weight:600; margin-bottom:0.8rem;">
+        Battery Pack
+      </div>
+
+      <div style="font-size:1.4rem; margin:0.4rem 0;">↓</div>
+
+      <div style="font-weight:600; margin-bottom:0.8rem;">
+        Dual VESCs
+        <div style="font-size:0.85rem; color:#475569; font-weight:400;">
+          Independent motor control & current limiting
+        </div>
+      </div>
+
+      <div style="font-size:1.4rem; margin:0.4rem 0;">↓</div>
+
+      <div style="
+        display: flex;
+        justify-content: space-between;
+        gap: 1.2rem;
+        margin-top: 0.5rem;
+      ">
+        <div style="
+          flex: 1;
+          padding: 0.8rem;
+          border: 1px solid #e5e7eb;
+          border-radius: 10px;
+          background: white;
+          font-weight:600;
+        ">
+          Rear Motor (Left)
+        </div>
+
+        <div style="
+          flex: 1;
+          padding: 0.8rem;
+          border: 1px solid #e5e7eb;
+          border-radius: 10px;
+          background: white;
+          font-weight:600;
+        ">
+          Rear Motor (Right)
+        </div>
+      </div>
+
+      <div style="font-size:1.4rem; margin:0.6rem 0;">↓</div>
+
+      <div style="
+        font-weight:600;
+        padding: 0.8rem;
+        border-radius: 10px;
+        background: #0f172a;
+        color: white;
+      ">
+        Traction Control & Torque Management
+        <div style="font-size:0.85rem; color:#fde68a; font-weight:400;">
+          Slip detection • Power limiting • Stability control
+        </div>
+      </div>
+    </div>
 
     <p>
-      This architecture allows precise control over torque distribution, improving
-      stability, efficiency, and safety across variable terrain.
+      This configuration delivers rear-wheel all-wheel-drive behavior with independent
+      torque control at each wheel, improving traction, stability, and efficiency on
+      loose or uneven terrain.
     </p>
   </section>
 
