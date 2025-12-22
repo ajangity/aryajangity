@@ -418,3 +418,23 @@ h1, h2, h3, h4,
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
 }
+
+
+.project-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.page-title {
+  font-size: 2.6rem;
+  margin-bottom: 2.5rem;
+}
