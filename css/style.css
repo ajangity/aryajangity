@@ -1283,3 +1283,10 @@ img, video {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
+
+.contact-info {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+}
