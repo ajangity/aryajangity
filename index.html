@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Source+Serif+4:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap"
     rel="stylesheet"
   >
 
@@ -19,9 +19,15 @@
 
 <body>
 
-<!-- =========================
+<!-- Scroll Progress -->
+<div id="scroll-progress"></div>
+
+<!-- Page Transition Overlay -->
+<div id="page-transition"></div>
+
+<!-- =====================
      NAVBAR
-========================= -->
+===================== -->
 <nav class="navbar">
   <a href="index.html" class="logo">Arya Jangity</a>
   <div class="nav-links">
@@ -31,26 +37,30 @@
   </div>
 </nav>
 
-<!-- =========================
+<!-- =====================
      MAIN CONTENT
-========================= -->
-<main class="about-layout fade-in">
+===================== -->
+<main class="about-layout">
 
-  <!-- LEFT COLUMN -->
-  <section class="profile">
+  <!-- LEFT — PROFILE COLUMN -->
+  <section class="profile anim-left">
+
     <img src="assets/images/arya.jpg" alt="Arya Jangity">
 
     <h2>Arya Jangity</h2>
-    <p class="subtitle">Robotics Engineering Undergraduate</p>
+
+    <!-- Typewriter subtitle -->
+    <p class="subtitle">
+      <span id="typewriter-text"></span>
+    </p>
 
     <p class="affiliation">
-      University of California,<br>
-      Santa Cruz
+      University of California,<br>Santa Cruz
     </p>
 
     <p class="contact-info">
       aryajangity52@gmail.com<br>
-      +1 (408) 921-994
+      +1 (408) 921-9940
     </p>
 
     <!-- Social Links -->
@@ -59,62 +69,140 @@
         <a href="https://github.com/ajangity" target="_blank" aria-label="GitHub">
           <img src="assets/icons/github.png" alt="GitHub">
         </a>
-
         <a href="https://www.linkedin.com/in/arya-jangity-909539292/" target="_blank" aria-label="LinkedIn">
           <img src="assets/icons/linkedin.png" alt="LinkedIn">
         </a>
       </div>
-
-      <a
-        href="https://bananabotsc.github.io/bananabots/"
-        target="_blank"
-        class="organization-link"
-      >
+      <a href="https://bananabotsc.github.io/bananabots/" target="_blank" class="organization-link">
         BananaBots
       </a>
     </div>
+
+    <!-- Currently Working On -->
+    <div class="active-projects">
+      <p class="active-projects-label">Currently Working On</p>
+      <div class="active-project-item">
+        <span class="live-dot"></span>
+        <span class="live-dot-label">Navigation App for the Visually Impaired</span>
+      </div>
+      <div class="active-project-item">
+        <span class="live-dot"></span>
+        <span class="live-dot-label">BananaBots &mdash; Assistive Tech Org</span>
+      </div>
+    </div>
+
   </section>
 
-  <!-- RIGHT COLUMN -->
+  <!-- RIGHT — ABOUT CONTENT -->
   <section class="about-content">
-    <h1>About me</h1>
 
-    <p>
+    <h1 class="anim-up">About me</h1>
+
+    <p class="anim-up delay-1">
       I am a Robotics Engineering undergraduate at the University of California, Santa Cruz,
-      focused on building assistive technology and humanoid robotic systems that integrate
-      hardware, embedded software, and cloud-connected applications.
+      building assistive technology and robotic systems that integrate hardware, embedded
+      software, and cloud-connected applications.
     </p>
 
-    <p>
-      My work spans assistive healthcare devices, wearable sensing systems, humanoid manipulation
-      research, and large-scale competitive robotics. I am particularly interested in roles involving
-      robotics, embedded systems, firmware, and applied engineering research.
+    <p class="anim-up delay-2">
+      My work spans wearable sensing devices, humanoid manipulation research, indoor navigation
+      for the visually impaired, and large-scale competitive robotics. I am most interested
+      in roles involving embedded systems, firmware, and applied engineering research.
     </p>
+
+    <!-- Stats Row -->
+    <div class="stats-row">
+      <div class="stat-item anim-up delay-2">
+        <div class="stat-number" data-target="6" data-suffix="+">6+</div>
+        <div class="stat-label">FIRST Regionals</div>
+      </div>
+      <div class="stat-item anim-up delay-3">
+        <div class="stat-number" data-target="30" data-suffix="+">30+</div>
+        <div class="stat-label">Students Mentored</div>
+      </div>
+      <div class="stat-item anim-up delay-4">
+        <div class="stat-number" data-target="10" data-suffix="+">10+</div>
+        <div class="stat-label">Org Members Led</div>
+      </div>
+      <div class="stat-item anim-up delay-5">
+        <div class="stat-number" data-target="80" data-suffix="%">80%</div>
+        <div class="stat-label">Print Quality Gain</div>
+      </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="skills-section anim-up delay-3">
+      <h3>Technical Skills</h3>
+
+      <div class="skill-group">
+        <div class="skill-group-label">Languages</div>
+        <div class="skill-tags">
+          <span class="tag tag-python">Python</span>
+          <span class="tag tag-c">C / C++</span>
+          <span class="tag tag-c">Assembly</span>
+          <span class="tag tag-java">Java</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">Systems &amp; Hardware</div>
+        <div class="skill-tags">
+          <span class="tag tag-hw">Embedded Systems</span>
+          <span class="tag tag-hw">Sensor Integration</span>
+          <span class="tag tag-hw">Signal Processing</span>
+          <span class="tag tag-hw">Wireless Communication</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">Tools &amp; Platforms</div>
+        <div class="skill-tags">
+          <span class="tag tag-tools">Git</span>
+          <span class="tag tag-tools">VS Code</span>
+          <span class="tag tag-tools">Flask</span>
+          <span class="tag tag-tools">VESC</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">CAD &amp; Fabrication</div>
+        <div class="skill-tags">
+          <span class="tag tag-cad">Fusion 360</span>
+          <span class="tag tag-cad">Onshape</span>
+          <span class="tag tag-cad">3D Printing</span>
+          <span class="tag tag-cad">FDM Optimization</span>
+        </div>
+      </div>
+    </div>
 
     <!-- Info Grid -->
     <div class="info-grid">
-      <div>
+
+      <div class="anim-up delay-4">
         <h3>Interests</h3>
         <ul>
-          <li>Robotics & Assistive Technology</li>
-          <li>Embedded Systems & Firmware</li>
-          <li>Wearable & Sensor-Based Devices</li>
+          <li>Robotics &amp; Assistive Technology</li>
+          <li>Embedded Systems &amp; Firmware</li>
+          <li>Wearable &amp; Sensor-Based Devices</li>
           <li>Humanoid Robotics</li>
+          <li>Indoor Navigation &amp; Computer Vision</li>
           <li>Applied Robotics Research</li>
         </ul>
       </div>
 
-      <div>
+      <div class="anim-up delay-5">
         <h3>Education</h3>
         <ul>
           <li>
             <strong>B.S. Robotics Engineering</strong><br>
-            University of California, Santa Cruz<br>
+            UC Santa Cruz<br>
             Expected Graduation: 2028
           </li>
         </ul>
       </div>
+
     </div>
+
   </section>
 
 </main>
@@ -124,5 +212,3 @@
 
 </body>
 </html>
-
-

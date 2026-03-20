@@ -8,13 +8,21 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet"
+  >
 
-  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+
+<!-- Scroll Progress -->
+<div id="scroll-progress"></div>
+
+<!-- Page Transition Overlay -->
+<div id="page-transition"></div>
 
 <!-- NAVBAR -->
 <nav class="navbar">
@@ -26,69 +34,84 @@
   </div>
 </nav>
 
-<main class="fade-in" style="max-width:1000px; margin:4rem auto; padding:0 2rem;">
-  <h1 class="page-title">Education</h1>
+<main style="max-width:1000px; margin:4rem auto; padding:0 2rem;">
 
-  <!-- EDUCATION -->
-  <div class="experience-card" style="margin-bottom:2.5rem;">
+  <h1 class="page-title anim-up">Education</h1>
+  <p class="page-subtitle anim-up delay-1">Academic background &amp; coursework</p>
+
+  <!-- ── INSTITUTIONS ───────────────────────── -->
+
+  <div class="section-header anim-up delay-1">
+    <h2>Institutions</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="experience-card anim-up delay-2">
     <h2>University of California, Santa Cruz</h2>
-    <p class="experience-date">B.S. Robotics Engineering • Sep 2025 – Present</p>
+    <span class="experience-date">B.S. Robotics Engineering &bull; Sep 2025 &mdash; Expected Graduation: 2028</span>
     <ul>
       <li>Focus on embedded systems, robotics, sensing, and applied control</li>
       <li>Hands-on laboratory coursework and project-based learning</li>
-      <li>Research and development through UCSC Slugbotics</li>
+      <li>Research collaboration with UCSC Computer Vision Lab (Prof. Roberto Manduchi)</li>
+      <li>Co-founded BananaBots assistive technology organization</li>
     </ul>
   </div>
 
-  <div class="experience-card" style="margin-bottom:3.5rem;">
-    <h2>Homestead High School & De Anza Middle College</h2>
-    <p class="experience-date">Dual-Enrollment STEM Program • Aug 2021 – Jun 2025</p>
+  <div class="experience-card anim-up delay-3">
+    <h2>Homestead High School &amp; De Anza Middle College</h2>
+    <span class="experience-date">Dual-Enrollment STEM Program &bull; Aug 2021 &mdash; Jun 2025</span>
     <ul>
       <li>Completed college-level math, physics, and engineering coursework</li>
       <li>Balanced academics with competitive robotics and leadership roles</li>
+      <li>Mechanical Executive Lead, FIRST Robotics Team 670</li>
       <li>Strong foundation in technical problem-solving and systems thinking</li>
     </ul>
   </div>
 
-  <!-- COURSES -->
-  <h2 style="margin-bottom:1.5rem;">Coursework</h2>
+  <!-- ── COURSEWORK ─────────────────────────── -->
 
-  <div class="experience-card" style="margin-bottom:2rem;">
+  <div class="section-header anim-up delay-2" style="margin-top: 1rem;">
+    <h2>Coursework</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="experience-card anim-up delay-3">
+    <h3>Computer Science &amp; Systems</h3>
+    <span class="experience-date">
+      Computer Systems &amp; Assembly (C) &bull; Programming Abstractions (Python) &bull; Java Programming
+    </span>
+    <ul>
+      <li>Low-level systems programming in C and x86 Assembly</li>
+      <li>Memory management, pointers, and hardware-level computation</li>
+      <li>Object-oriented programming and software design in Java</li>
+      <li>Data structures, algorithmic thinking, and modular code organization</li>
+      <li>Backend scripting, automation, and simulation in Python</li>
+    </ul>
+  </div>
+
+  <div class="experience-card anim-up delay-4">
     <h3>Mathematics</h3>
-    <p class="experience-date">
-      Calculus • Linear Algebra • Differential Equations
-    </p>
+    <span class="experience-date">
+      Vector Calculus &bull; Linear Algebra &bull; Differential Equations
+    </span>
     <ul>
-      <li>Multivariable calculus and vector analysis</li>
+      <li>Multivariable calculus and vector analysis for robotics and physics</li>
       <li>Matrix operations, eigenvalues, and linear systems</li>
-      <li>Differential equation modeling of physical systems</li>
-      <li>Mathematical foundations for controls and robotics</li>
+      <li>Differential equation modeling of physical and mechanical systems</li>
+      <li>Mathematical foundations for controls, kinematics, and dynamics</li>
     </ul>
   </div>
 
-  <div class="experience-card" style="margin-bottom:2rem;">
-    <h3>Computer Science</h3>
-    <p class="experience-date">
-      Java Programming • Python Programming
-    </p>
+  <div class="experience-card anim-up delay-5">
+    <h3>Engineering &amp; Physics</h3>
+    <span class="experience-date">
+      Physics (Mechanics) &bull; Engineering Design
+    </span>
     <ul>
-      <li>Object-oriented programming and software design</li>
-      <li>Data structures and algorithmic thinking</li>
-      <li>Backend scripting, automation, and simulation</li>
-      <li>Debugging, testing, and modular code organization</li>
-    </ul>
-  </div>
-
-  <div class="experience-card">
-    <h3>Engineering & Physics</h3>
-    <p class="experience-date">
-      Physics • Engineering Design
-    </p>
-    <ul>
-      <li>Classical mechanics and applied physics</li>
+      <li>Classical mechanics and applied physics for robotic systems</li>
       <li>System-level engineering design methodology</li>
-      <li>Hands-on prototyping and experimentation</li>
-      <li>Translating theory into real-world systems</li>
+      <li>Hands-on prototyping, fabrication, and experimentation</li>
+      <li>Translating theoretical principles into real-world engineered systems</li>
     </ul>
   </div>
 

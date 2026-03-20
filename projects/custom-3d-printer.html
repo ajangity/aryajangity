@@ -2,13 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Custom 3D Printer | Arya Jangity</title>
-  <link rel="stylesheet" href="../css/style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom 3D Printer | Arya Jangity</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
 
+<!-- Scroll Progress -->
+<div id="scroll-progress"></div>
+
+<!-- Page Transition Overlay -->
+<div id="page-transition"></div>
+
+<!-- NAVBAR -->
 <nav class="navbar">
   <a href="../index.html" class="logo">Arya Jangity</a>
   <div class="nav-links">
@@ -18,129 +34,131 @@
   </div>
 </nav>
 
-<main class="project-page" style="max-width:900px; margin:4rem auto; padding:0 2rem;">
+<main class="project-page fade-in">
 
-  <h1>Custom-Built & Modified 3D Printer</h1>
+  <a href="index.html" class="back-link">&#8592; Back to Projects</a>
+
+  <h1>Custom-Built &amp; Modified 3D Printer</h1>
   <p class="project-subtitle">
     Mechanical, thermal, and process optimizations to improve print quality,
     reliability, and development speed
   </p>
 
+  <div style="margin-bottom: 2rem;">
+    <span class="project-tag">FDM Optimization</span>
+    <span class="project-tag">Thermal Calibration</span>
+    <span class="project-tag">Hardware Mods</span>
+    <span class="project-tag">Jun 2022 &ndash; Oct 2024</span>
+  </div>
+
   <!-- OVERVIEW -->
   <section>
-    <h2>Overview & Motivation</h2>
+    <h2>Overview &amp; Motivation</h2>
     <p>
       3D printers are powerful tools because they allow anyone to create unique,
       custom parts on demand. However, they also come with major limitations:
-      long print times, inconsistent quality, and reliability issues when
-      trying to iterate quickly.
+      long print times, inconsistent quality, and reliability issues when trying
+      to iterate quickly on a design.
     </p>
     <p>
-      I modified my printer to directly address these issues, focusing on
-      reducing warping, improving surface quality, shortening iteration time,
-      and increasing overall reliability during long prints.
+      I modified my printer to directly address these issues, focusing on reducing
+      warping, improving surface quality, shortening iteration time, and increasing
+      overall reliability during long multi-day prints.
     </p>
 
-    <img src="../assets/images/projects/printer/printer.jpg"
-         alt="Modified 3D printer"
-         style="width:100%; margin:2rem 0; border-radius:12px;">
+    <img src="../assets/images/projects/printer/printer.jpg" alt="Modified 3D printer">
   </section>
 
-  <!-- WARPING PROBLEM -->
+  <!-- WARPING -->
   <section>
     <h2>Solving Print Warping</h2>
     <p>
       One of the biggest issues I encountered was warping at the bottom of prints.
       This is caused by thermal stress from the heated build plate, which is needed
-      for adhesion but can distort parts as they cool.
+      for adhesion but can distort parts as they cool unevenly.
     </p>
-    <p>
-      I evaluated two approaches:
-    </p>
+    <p>I evaluated two approaches:</p>
     <ul>
-      <li>Using supports (which increased print time and material usage)</li>
+      <li>Using supports, which increased print time and material usage</li>
       <li>Reducing build plate temperature while improving surface adhesion</li>
     </ul>
     <p>
       I chose the second approach to maintain fast iteration speeds without
-      sacrificing part quality.
+      sacrificing part quality or requiring post-processing cleanup.
     </p>
 
-    <img src="../assets/images/projects/printer/printer-bed.jpg"
-         alt="Fiberglass build plate"
-         style="width:100%; margin:2rem 0; border-radius:12px;">
+    <img src="../assets/images/projects/printer/printer-bed.jpg" alt="Fiberglass build plate">
   </section>
 
-  <!-- BUILD PLATE MOD -->
+  <!-- BUILD PLATE -->
   <section>
     <h2>Build Plate Upgrade</h2>
     <p>
-      I replaced the original glass build plate with a fiberglass plate.
-      The rougher surface allows filament to mechanically grip into
-      microscopic crevices, dramatically improving adhesion at lower
-      temperatures.
+      I replaced the original glass build plate with a fiberglass plate. The rougher
+      surface allows filament to mechanically grip into microscopic crevices,
+      dramatically improving adhesion at lower temperatures.
     </p>
     <p>
-      This change eliminated the need for glue, reduced warping, and made
-      part removal easier by allowing the plate to flex instead of prying
-      prints off a rigid glass surface.
+      This change eliminated the need for glue or adhesive sprays, reduced warping,
+      and made part removal easier by allowing the plate to flex slightly instead of
+      prying prints off a rigid glass surface.
     </p>
   </section>
 
-  <!-- NOZZLE SYSTEM -->
+  <!-- NOZZLE -->
   <section>
     <h2>Interchangeable Nozzle System</h2>
     <p>
-      The nozzle plays a critical role in print quality and speed. Smaller
-      nozzles produce finer detail but dramatically increase print time,
-      while larger nozzles allow faster prints at the cost of resolution.
+      The nozzle plays a critical role in print quality and speed. Smaller nozzles
+      produce finer detail but dramatically increase print time, while larger nozzles
+      allow faster prints at the cost of resolution.
     </p>
     <p>
-      I modified the printer to support interchangeable nozzles, allowing
-      me to choose the optimal nozzle size depending on the application:
+      I modified the printer to support interchangeable nozzles, allowing me to
+      choose the optimal nozzle size depending on the application:
     </p>
     <ul>
-      <li>Thin nozzles for high-precision parts</li>
-      <li>Larger nozzles for rapid prototyping and structural components</li>
+      <li>Thin nozzles for high-precision structural or cosmetic parts</li>
+      <li>Larger nozzles for rapid prototyping and functional components</li>
     </ul>
 
-    <img src="../assets/images/projects/printer/printer-nozzle.jpg"
-         alt="3D printer nozzle"
-         style="width:100%; margin:2rem 0; border-radius:12px;">
+    <img src="../assets/images/projects/printer/printer-nozzle.jpg" alt="3D printer nozzle">
   </section>
 
-  <!-- THERMAL TUNING -->
+  <!-- THERMAL -->
   <section>
-    <h2>Thermal Calibration & Material Testing</h2>
+    <h2>Thermal Calibration &amp; Material Testing</h2>
     <p>
-      I performed extensive testing with nozzle temperature to balance print
-      quality, strength, and reliability.
+      I performed extensive testing with nozzle temperature to balance print quality,
+      strength, and reliability across different filament batches.
     </p>
     <p>
-      Through experimentation, I found <strong>210 °C</strong> to be the optimal
-      printing temperature:
+      Through systematic experimentation, I found <strong>210&deg;C</strong> to be
+      the optimal printing temperature for standard PLA:
     </p>
     <ul>
       <li>Lower temperatures caused under-extrusion and weak layer bonding</li>
-      <li>Higher temperatures caused stringing and overly glossy surfaces</li>
+      <li>Higher temperatures caused stringing and overly glossy surface finish</li>
     </ul>
     <p>
-      This tuning significantly improved surface finish and reduced failed prints.
+      This tuning significantly improved surface finish consistency and reduced
+      failed prints, cutting wasted filament and iteration time.
     </p>
   </section>
 
   <!-- RELIABILITY -->
   <section>
-    <h2>Reliability & Print Monitoring</h2>
+    <h2>Reliability &amp; Print Monitoring</h2>
     <p>
-      To improve reliability during long prints, I implemented a system that
-      allows me to monitor prints remotely from my computer.
+      To improve reliability during long prints, I implemented remote monitoring
+      that allows me to check print progress from my computer without being physically
+      present.
     </p>
     <p>
-      I also configured automatic power-loss recovery, allowing the printer
-      to pause a build if power is lost and resume from the exact point where
-      it stopped once power is restored. This prevented multi-day prints from
-      being lost due to brief outages.
+      I also configured automatic power-loss recovery, allowing the printer to pause
+      a build if power is interrupted and resume from the exact point where it stopped
+      once power is restored &mdash; preventing multi-day prints from being lost due
+      to brief outages.
     </p>
   </section>
 
@@ -148,20 +166,21 @@
   <section>
     <h2>Results</h2>
     <ul>
-      <li>Significantly reduced warping without supports</li>
+      <li>80% improvement in print quality and efficiency</li>
+      <li>Significantly reduced warping without requiring supports</li>
       <li>Improved surface finish and dimensional accuracy</li>
       <li>Faster iteration through nozzle and thermal optimization</li>
-      <li>Higher success rate on long prints</li>
+      <li>Higher success rate on long multi-day prints</li>
     </ul>
   </section>
 
   <!-- FUTURE -->
   <section>
-    <h2>What I’d Improve Next</h2>
+    <h2>What I&rsquo;d Improve Next</h2>
     <ul>
-      <li>Enclosed thermal chamber for advanced materials</li>
-      <li>Automated bed leveling with sensor feedback</li>
-      <li>Material-specific print profiles</li>
+      <li>Enclosed thermal chamber for printing advanced materials (ABS, ASA, PA)</li>
+      <li>Automated bed leveling with proximity sensor feedback</li>
+      <li>Material-specific profiles for consistent results across filament types</li>
       <li>Real-time failure detection using computer vision</li>
     </ul>
   </section>

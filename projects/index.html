@@ -8,13 +8,21 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet"
+  >
 
-  <!-- Styles -->
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
+
+<!-- Scroll Progress -->
+<div id="scroll-progress"></div>
+
+<!-- Page Transition Overlay -->
+<div id="page-transition"></div>
 
 <!-- NAVBAR -->
 <nav class="navbar">
@@ -26,82 +34,149 @@
   </div>
 </nav>
 
-<main class="fade-in" style="max-width:1100px; margin:4rem auto; padding:0 2rem;">
-  <h1 class="page-title">Projects</h1>
+<div class="projects-wrapper">
 
-  <!-- BananaPuck -->
-  <section style="margin-bottom:3rem;">
-    <a href="bananapuck.html" class="card-link">
-      <div class="experience-card project-card"
-           style="border:1px solid #e5e7eb; border-radius:14px; background:#ffffff;">
-        <div class="project-text">
-          <h2>BananaPuck</h2>
-          <p class="experience-date">
-            Chest-mounted wearable for fall detection & vital monitoring
-          </p>
-        </div>
-        <div class="project-image">
-          <img src="../assets/images/projects/bananapuck.jpg" alt="BananaPuck device">
-        </div>
-      </div>
-    </a>
-  </section>
+  <h1 class="page-title anim-up">Projects</h1>
+  <p class="page-subtitle anim-up delay-1">
+    Hardware, embedded systems, and assistive technology
+  </p>
 
-  <!-- Humanoid Hand -->
-  <section style="margin-bottom:3rem;">
-    <a href="humanoid-hand.html" class="card-link">
-      <div class="experience-card project-card"
-           style="border:1px solid #e5e7eb; border-radius:14px; background:#ffffff;">
-        <div class="project-text">
-          <h2>Humanoid Robotic Hand</h2>
-          <p class="experience-date">
-            Biomimetic humanoid manipulation research
-          </p>
-        </div>
-        <div class="project-image">
-          <img src="../assets/images/projects/humanoid-hand.jpg" alt="Humanoid robotic hand">
-        </div>
-      </div>
-    </a>
-  </section>
+  <div class="projects-grid">
 
-  <!-- Skateboard -->
-  <section style="margin-bottom:3rem;">
-    <a href="all-terrain-skateboard.html" class="card-link">
-      <div class="experience-card project-card"
-           style="border:1px solid #e5e7eb; border-radius:14px; background:#ffffff;">
-        <div class="project-text">
-          <h2>All-Terrain Electric Skateboard</h2>
-          <p class="experience-date">
-            High-torque electric drivetrain for rough terrain
-          </p>
+    <!-- Navigation App -->
+    <div class="anim-up delay-1">
+      <a href="navigation-app.html" class="card-link">
+        <div class="project-card">
+          <div class="project-text">
+            <h2>
+              Navigation App for the Visually Impaired
+              <span class="active-badge" style="vertical-align:middle;"><span class="dot"></span>Active</span>
+            </h2>
+            <p>
+              Indoor assistive navigation system for visually impaired users, with
+              graph-based routing, computer vision localization, and multimodal
+              accessible interfaces. Collaboration with Prof. Roberto Manduchi
+              and the UCSC Computer Vision Lab.
+            </p>
+            <div>
+              <span class="project-tag blue">Computer Vision</span>
+              <span class="project-tag blue">Graph Routing</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag green">Assistive Tech</span>
+            </div>
+          </div>
+          <div class="project-image">
+            <img
+              src="../assets/images/arya.jpg"
+              alt="Navigation app for visually impaired"
+              style="filter: brightness(0.85);"
+            >
+          </div>
         </div>
-        <div class="project-image">
-          <img src="../assets/images/projects/skateboard.jpg" alt="Electric skateboard">
-        </div>
-      </div>
-    </a>
-  </section>
+      </a>
+    </div>
 
-  <!-- 3D Printer -->
-  <section style="margin-bottom:3rem;">
-    <a href="custom-3d-printer.html" class="card-link">
-      <div class="experience-card project-card"
-           style="border:1px solid #e5e7eb; border-radius:14px; background:#ffffff;">
-        <div class="project-text">
-          <h2>Custom 3D Printer</h2>
-          <p class="experience-date">
-            Mechanically optimized printer for high-precision parts
-          </p>
+    <!-- BananaPuck -->
+    <div class="anim-up delay-2">
+      <a href="bananapuck.html" class="card-link">
+        <div class="project-card">
+          <div class="project-text">
+            <h2>BananaPuck</h2>
+            <p>
+              Chest-mounted wearable device for continuous fall detection and vital
+              monitoring in elderly and rehabilitation patients. Integrates IMU,
+              ECG, temperature, GPS, and a real-time caregiver dashboard.
+            </p>
+            <div>
+              <span class="project-tag">Embedded Systems</span>
+              <span class="project-tag">Sensor Fusion</span>
+              <span class="project-tag">Flask</span>
+              <span class="project-tag green">Assistive Tech</span>
+            </div>
+          </div>
+          <div class="project-image">
+            <img src="../assets/images/projects/bananapuck.jpg" alt="BananaPuck device">
+          </div>
         </div>
-        <div class="project-image">
-          <img src="../assets/images/projects/printer.jpg" alt="3D printer">
-        </div>
-      </div>
-    </a>
-  </section>
+      </a>
+    </div>
 
-</main>
+    <!-- Humanoid Hand -->
+    <div class="anim-up delay-3">
+      <a href="humanoid-hand.html" class="card-link">
+        <div class="project-card">
+          <div class="project-text">
+            <h2>Humanoid Robotic Hand</h2>
+            <p>
+              Dexterous humanoid manipulation research at UCSC Slugbotics, focused on
+              replicating human hand capability through biomimetic kinematics, tactile
+              sensing, and sensor-driven closed-loop control.
+            </p>
+            <div>
+              <span class="project-tag blue">Robotics Research</span>
+              <span class="project-tag">Biomimetics</span>
+              <span class="project-tag">Tactile Sensing</span>
+            </div>
+          </div>
+          <div class="project-image">
+            <img src="../assets/images/projects/humanoid-hand.jpg" alt="Humanoid robotic hand">
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Electric Skateboard -->
+    <div class="anim-up delay-4">
+      <a href="all-terrain-skateboard.html" class="card-link">
+        <div class="project-card">
+          <div class="project-text">
+            <h2>All-Terrain Electric Skateboard</h2>
+            <p>
+              High-torque, dual rear-motor electric mountainboard with custom suspension,
+              VESC-based independent motor control, traction control software,
+              and a custom high-capacity battery pack with ~43 miles of range.
+            </p>
+            <div>
+              <span class="project-tag">Mechanical Design</span>
+              <span class="project-tag">VESC</span>
+              <span class="project-tag">Embedded Control</span>
+              <span class="project-tag">3D Printing</span>
+            </div>
+          </div>
+          <div class="project-image">
+            <img src="../assets/images/projects/skateboard.jpg" alt="Electric skateboard">
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- 3D Printer -->
+    <div class="anim-up delay-5">
+      <a href="custom-3d-printer.html" class="card-link">
+        <div class="project-card">
+          <div class="project-text">
+            <h2>Custom 3D Printer</h2>
+            <p>
+              Mechanically and thermally optimized FDM printer for high-precision
+              parts. Fiberglass build plate, interchangeable nozzle system, 210&deg;C
+              thermal calibration, and remote monitoring &mdash; 80% improvement
+              in print quality and efficiency.
+            </p>
+            <div>
+              <span class="project-tag">FDM Optimization</span>
+              <span class="project-tag">Thermal Calibration</span>
+              <span class="project-tag">Hardware Mods</span>
+            </div>
+          </div>
+          <div class="project-image">
+            <img src="../assets/images/projects/printer.jpg" alt="3D printer">
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </div><!-- /.projects-grid -->
+</div><!-- /.projects-wrapper -->
 
 <script src="../js/main.js"></script>
 </body>

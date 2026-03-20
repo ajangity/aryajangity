@@ -8,12 +8,21 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+
+<!-- Scroll Progress -->
+<div id="scroll-progress"></div>
+
+<!-- Page Transition Overlay -->
+<div id="page-transition"></div>
 
 <!-- NAVBAR -->
 <nav class="navbar">
@@ -25,167 +34,255 @@
   </div>
 </nav>
 
-<main class="timeline-page fade-in">
-  <h1 class="page-title">Experience</h1>
+<main class="timeline-page">
+
+  <h1 class="page-title anim-up">Experience</h1>
+  <p class="page-subtitle anim-up delay-1">
+    Hover a card to flip it and see more detail. On mobile, tap to expand.
+  </p>
 
   <div class="timeline">
 
-    <!-- BananaBots -->
-    <div class="timeline-item">
+    <!-- Navigation App -->
+    <div class="timeline-item anim-up delay-1">
       <span class="timeline-dot"></span>
-      <div class="timeline-content flip-card">
-        <div class="card-inner">
+      <div class="timeline-content">
+        <div class="flip-card">
+          <div class="card-inner">
 
-          <div class="card-front">
-            <h3>Co-Founder & Lead Engineer — BananaBots</h3>
-            <span class="timeline-date">Oct 2025 – Present</span>
-            <p>Assistive robotics & healthcare technology initiative</p>
+            <div class="card-front">
+              <span class="timeline-date">Feb 2026 &mdash; Present</span>
+              <h3>Navigation App for the Visually Impaired</h3>
+              <p>Indoor assistive navigation &mdash; graph routing &amp; computer vision</p>
+              <span class="active-badge"><span class="dot"></span>Active</span>
+              <p class="flip-hint">&#8635; Hover to flip</p>
+            </div>
+
+            <div class="card-back">
+              <h4>What I&rsquo;m Building</h4>
+              <p>
+                Developing an indoor assistive navigation system enabling room-level guidance
+                for visually impaired users through structured routing and accessible
+                multimodal interfaces.
+              </p>
+              <p>
+                Designing a graph-based routing engine that represents building layouts as
+                node-edge networks and computes optimal paths, integrated with computer
+                vision-based localization.
+              </p>
+              <p>
+                Collaborating with Prof. Roberto Manduchi and the UCSC Computer Vision Lab,
+                contributing system architecture and UI development for real-world deployment.
+              </p>
+            </div>
+
           </div>
+        </div>
 
-          <div class="card-back">
-            <h4>What I Did</h4>
-            <p>
-              Co-founded BananaBots with the mission of building assistive technologies
-              that improve safety, independence, and quality of life for elderly and
-              rehabilitation patients.
-            </p>
-            <p>
-              Led end-to-end engineering across hardware, embedded firmware, and
-              cloud-connected systems. Designed wearable vital-tracking devices,
-              fall-detection pipelines, and real-time caregiver dashboards.
-            </p>
-            <p>
-              Worked closely with UCSC faculty mentors to prototype, test, and iterate
-              rapidly, balancing engineering rigor with real-world usability and
-              patient comfort.
-            </p>
+        <div class="mobile-card-content">
+          <p>Developing an indoor assistive navigation system for visually impaired users, with graph-based routing and computer vision-based localization.</p>
+          <p>Collaboration with Prof. Roberto Manduchi at the UCSC Computer Vision Lab.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BananaBots -->
+    <div class="timeline-item anim-up delay-2">
+      <span class="timeline-dot"></span>
+      <div class="timeline-content">
+        <div class="flip-card">
+          <div class="card-inner">
+
+            <div class="card-front">
+              <span class="timeline-date">Nov 2025 &mdash; Present</span>
+              <h3>Co-Founder &amp; Co-President &mdash; BananaBots</h3>
+              <p>Assistive robotics &amp; healthcare technology organization</p>
+              <span class="active-badge"><span class="dot"></span>Active</span>
+              <p class="flip-hint">&#8635; Hover to flip</p>
+            </div>
+
+            <div class="card-back">
+              <h4>What I Did</h4>
+              <p>
+                Co-founded BananaBots, a 10+ member assistive technology organization
+                focused on improving independence, safety, and quality of life for
+                elderly users, rehabilitation patients, and people with disabilities.
+              </p>
+              <p>
+                Established partnerships with UCSC faculty and research labs, built
+                onboarding pipelines, sub-team structure, and project workflows to
+                support efficient execution and long-term growth.
+              </p>
+              <p>
+                Drive BananaBots with an entrepreneurial approach &mdash; identifying
+                high-impact problems and building systems intended for practical
+                deployment beyond the university setting.
+              </p>
+            </div>
+
           </div>
+        </div>
 
+        <div class="mobile-card-content">
+          <p>Co-founded and lead BananaBots, a 10+ member assistive tech organization focused on elderly care and rehabilitation patients.</p>
+          <p>Established UCSC faculty partnerships, built onboarding pipelines and sub-team structure.</p>
         </div>
       </div>
     </div>
 
     <!-- Slugbotics -->
-    <div class="timeline-item">
+    <div class="timeline-item anim-up delay-3">
       <span class="timeline-dot"></span>
-      <div class="timeline-content flip-card">
-        <div class="card-inner">
+      <div class="timeline-content">
+        <div class="flip-card">
+          <div class="card-inner">
 
-          <div class="card-front">
-            <h3>Humanoid Hand Researcher & Developer — UCSC Slugbotics</h3>
-            <span class="timeline-date">Oct 2025 – Present</span>
-            <p>Humanoid manipulation & biomimetic research</p>
+            <div class="card-front">
+              <span class="timeline-date">Oct 2025 &mdash; Present</span>
+              <h3>Humanoid Hand Researcher &mdash; UCSC Slugbotics</h3>
+              <p>Humanoid manipulation &amp; biomimetic research</p>
+              <span class="active-badge"><span class="dot"></span>Active</span>
+              <p class="flip-hint">&#8635; Hover to flip</p>
+            </div>
+
+            <div class="card-back">
+              <h4>What I Did</h4>
+              <p>
+                Conducting research on dexterous humanoid hand design with a focus on
+                biomimetic kinematics, actuation, and fine manipulation.
+              </p>
+              <p>
+                Developing control strategies for multi-degree-of-freedom fingers and
+                integrating tactile sensing to improve grasp stability and force awareness.
+              </p>
+              <p>
+                Exploring vision-assisted and sensor-driven closed-loop control for
+                human-aiding robotic manipulation tasks.
+              </p>
+            </div>
+
           </div>
-
-          <div class="card-back">
-            <h4>What I Did</h4>
-            <p>
-              Conducting research on dexterous humanoid hand design with a focus on
-              biomimetic kinematics, actuation, and fine manipulation.
-            </p>
-            <p>
-              Developing control strategies for multi-degree-of-freedom fingers and
-              integrating tactile sensing to improve grasp stability and force awareness.
-            </p>
-            <p>
-              Exploring vision-assisted and sensor-driven closed-loop control for
-              human-aiding robotic manipulation tasks.
-            </p>
-          </div>
-
         </div>
-      </div>
-    </div>
 
-    <!-- FIRST Robotics -->
-    <div class="timeline-item">
-      <span class="timeline-dot"></span>
-      <div class="timeline-content flip-card">
-        <div class="card-inner">
-
-          <div class="card-front">
-            <h3>Mechanical Executive Lead — FIRST Robotics Team 670</h3>
-            <span class="timeline-date">Aug 2021 – May 2025</span>
-            <p>Competitive robotics leadership</p>
-          </div>
-
-          <div class="card-back">
-            <h4>What I Did</h4>
-            <p>
-              Served as Mechanical Executive Lead, overseeing robot design, fabrication,
-              and mechanical systems integration across multiple competition seasons.
-            </p>
-            <p>
-              Designed and built robots that competed in six FIRST regionals, including
-              qualification for the 2024 World Championship.
-            </p>
-            <p>
-              Led and mentored 30+ students, coordinated build schedules, and organized
-              scrimmages involving 20+ teams to foster collaboration and skill growth.
-            </p>
-          </div>
-
+        <div class="mobile-card-content">
+          <p>Researching dexterous humanoid hand design at UCSC Slugbotics &mdash; biomimetic kinematics, tactile sensing, and closed-loop manipulation control.</p>
         </div>
       </div>
     </div>
 
     <!-- Recreation Attendant -->
-    <div class="timeline-item">
+    <div class="timeline-item anim-up delay-4">
       <span class="timeline-dot"></span>
-      <div class="timeline-content flip-card">
-        <div class="card-inner">
+      <div class="timeline-content">
+        <div class="flip-card">
+          <div class="card-inner">
 
-          <div class="card-front">
-            <h3>Recreation Attendant</h3>
-            <span class="timeline-date">May 2025 – Present</span>
-            <p>Facility operations & customer service</p>
+            <div class="card-front">
+              <span class="timeline-date">May 2025 &mdash; Present</span>
+              <h3>Recreation Attendant</h3>
+              <p>Facility operations &amp; customer service</p>
+              <span class="active-badge"><span class="dot"></span>Active</span>
+              <p class="flip-hint">&#8635; Hover to flip</p>
+            </div>
+
+            <div class="card-back">
+              <h4>Responsibilities</h4>
+              <p>
+                Managed day-to-day facility operations while ensuring safety compliance
+                and a positive experience for all patrons.
+              </p>
+              <p>
+                Developed strong communication, accountability, and situational awareness
+                skills in a fast-paced, customer-facing environment.
+              </p>
+            </div>
+
           </div>
+        </div>
 
-          <div class="card-back">
-            <h4>Responsibilities</h4>
-            <p>
-              Managed day-to-day facility operations while ensuring safety compliance
-              and a positive experience for all patrons.
-            </p>
-            <p>
-              Developed strong communication, accountability, and situational awareness
-              skills in a fast-paced, customer-facing environment.
-            </p>
+        <div class="mobile-card-content">
+          <p>Managed facility operations, safety compliance, and patron experience in a fast-paced customer-facing role.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FIRST Robotics -->
+    <div class="timeline-item anim-up delay-3">
+      <span class="timeline-dot"></span>
+      <div class="timeline-content">
+        <div class="flip-card">
+          <div class="card-inner">
+
+            <div class="card-front">
+              <span class="timeline-date">Aug 2021 &mdash; May 2025</span>
+              <h3>Mechanical Executive Lead &mdash; FIRST Robotics Team 670</h3>
+              <p>Competitive robotics leadership &amp; mechanical engineering</p>
+              <p class="flip-hint">&#8635; Hover to flip</p>
+            </div>
+
+            <div class="card-back">
+              <h4>What I Did</h4>
+              <p>
+                Designed and built competition robots for 6 FIRST regionals, earning a
+                regional win, multiple team awards, and qualification to the 2024 World
+                Championship.
+              </p>
+              <p>
+                Managed 30+ team members and led a fabrication team through the design
+                and production of robotic intake and indexer components.
+              </p>
+              <p>
+                Organized scrimmages with 20+ teams, introducing hundreds of students to
+                STEM and live FIRST competitions.
+              </p>
+            </div>
+
           </div>
+        </div>
 
+        <div class="mobile-card-content">
+          <p>Led mechanical design across 6 FIRST regionals &mdash; regional win, multiple awards, 2024 World Championship qualification.</p>
+          <p>Managed 30+ team members; organized scrimmages with 20+ teams.</p>
         </div>
       </div>
     </div>
 
     <!-- Sunnyvale Little League -->
-    <div class="timeline-item">
+    <div class="timeline-item anim-up delay-4">
       <span class="timeline-dot"></span>
-      <div class="timeline-content flip-card">
-        <div class="card-inner">
+      <div class="timeline-content">
+        <div class="flip-card">
+          <div class="card-inner">
 
-          <div class="card-front">
-            <h3>Volunteer Coach / Umpire — Sunnyvale Little League</h3>
-            <span class="timeline-date">Feb 2022 – May 2025</span>
-            <p>Youth mentorship & leadership</p>
+            <div class="card-front">
+              <span class="timeline-date">Feb 2022 &mdash; May 2025</span>
+              <h3>Volunteer Coach / Umpire &mdash; Sunnyvale Little League</h3>
+              <p>Youth mentorship &amp; leadership</p>
+              <p class="flip-hint">&#8635; Hover to flip</p>
+            </div>
+
+            <div class="card-back">
+              <h4>Impact</h4>
+              <p>
+                Coached and umpired youth baseball for players ages 7&ndash;12,
+                emphasizing teamwork, confidence, and resilience.
+              </p>
+              <p>
+                Adapted coaching approaches to individual learning styles, promoting
+                inclusivity, growth, and a positive sports culture.
+              </p>
+            </div>
+
           </div>
+        </div>
 
-          <div class="card-back">
-            <h4>Impact</h4>
-            <p>
-              Coached and umpired youth baseball for players ages 7–12, emphasizing
-              teamwork, confidence, and resilience.
-            </p>
-            <p>
-              Adapted coaching and mentoring approaches to individual learning styles,
-              promoting inclusivity, growth, and a positive sports culture.
-            </p>
-          </div>
-
+        <div class="mobile-card-content">
+          <p>Coached and umpired youth baseball (ages 7&ndash;12) &mdash; teamwork, confidence, and inclusive mentorship across multiple seasons.</p>
         </div>
       </div>
     </div>
 
-  </div>
+  </div><!-- /.timeline -->
 </main>
 
 <script src="js/main.js"></script>

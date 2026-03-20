@@ -4,11 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Humanoid Robotic Hand | Arya Jangity</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
 
+<!-- Scroll Progress -->
+<div id="scroll-progress"></div>
+
+<!-- Page Transition Overlay -->
+<div id="page-transition"></div>
+
+<!-- NAVBAR -->
 <nav class="navbar">
   <a href="../index.html" class="logo">Arya Jangity</a>
   <div class="nav-links">
@@ -18,27 +34,36 @@
   </div>
 </nav>
 
-<main class="project-page fade-in" style="max-width:900px; margin:4rem auto; padding:0 2rem;">
+<main class="project-page fade-in">
+
+  <a href="index.html" class="back-link">&#8592; Back to Projects</a>
 
   <h1>Humanoid Robotic Hand</h1>
   <p class="project-subtitle">
     Dexterous humanoid manipulation research focused on replicating human hand capability
   </p>
 
+  <div style="margin-bottom: 2rem;">
+    <span class="project-tag blue">Robotics Research</span>
+    <span class="project-tag">Biomimetics</span>
+    <span class="project-tag">Tactile Sensing</span>
+    <span class="project-tag blue">UCSC Slugbotics</span>
+    <span class="project-tag green">Active &mdash; Oct 2025</span>
+  </div>
+
   <!-- HERO IMAGE -->
   <img
     src="../assets/images/projects/humanoid-hand/humanoid-hand.jpg"
     alt="Humanoid robotic hand prototype"
-    style="width:100%; margin:2.5rem 0; border-radius:14px;"
   >
 
   <!-- MISSION -->
   <section>
-    <h2>Mission & Why This Matters</h2>
+    <h2>Mission &amp; Why This Matters</h2>
     <p>
       The human hand is one of the most complex and capable tools in existence.
-      It allows us to manipulate objects, feel our environment, and interact
-      with the world in incredibly nuanced ways.
+      It allows us to manipulate objects, feel our environment, and interact with
+      the world in incredibly nuanced ways.
     </p>
     <p>
       Replicating these capabilities in robotic systems is critical for the future
@@ -53,18 +78,16 @@
     </p>
   </section>
 
-  <!-- MECHANICAL GOALS -->
+  <!-- MECHANICAL -->
   <section>
-    <h2>Dexterous Motion & Finger Mechanics</h2>
+    <h2>Dexterous Motion &amp; Finger Mechanics</h2>
     <p>
-      One of the primary challenges in humanoid manipulation is replicating the
-      range of motion present in human fingers. Unlike simple grippers, human
-      hands rely on coordinated finger curling, extension, and splaying to
-      interact with objects of varying shapes and sizes.
+      One of the primary challenges in humanoid manipulation is replicating the range
+      of motion present in human fingers. Unlike simple grippers, human hands rely on
+      coordinated finger curling, extension, and splaying to interact with objects of
+      varying shapes and sizes.
     </p>
-    <p>
-      This project explores mechanical and kinematic approaches to mimic:
-    </p>
+    <p>This project explores mechanical and kinematic approaches to mimic:</p>
     <ul>
       <li>Finger curling for grasping and power grips</li>
       <li>Finger extension for release and repositioning</li>
@@ -72,24 +95,22 @@
     </ul>
     <p>
       The design emphasizes anatomical inspiration while balancing mechanical
-      simplicity, strength, and scalability.
+      simplicity, strength, and scalability for real-world deployment.
     </p>
   </section>
 
   <!-- SENSING -->
   <section>
-    <h2>Tactile Sensing & Artificial Skin</h2>
+    <h2>Tactile Sensing &amp; Artificial Skin</h2>
     <p>
-      Human hands do far more than move — they sense. Touch provides critical
-      feedback about force, temperature, and surface texture, allowing us to
-      adjust our grip in real time.
+      Human hands do far more than move &mdash; they sense. Touch provides critical
+      feedback about force, temperature, and surface texture, allowing us to adjust
+      grip in real time without conscious effort.
     </p>
     <p>
       A major research direction of this project is the integration of distributed
-      sensing throughout the hand, similar to how human skin functions.
-    </p>
-    <p>
-      Planned sensing capabilities include:
+      sensing throughout the hand, similar to how human skin functions. Planned
+      sensing capabilities include:
     </p>
     <ul>
       <li>Pressure sensing to detect grip force and contact location</li>
@@ -98,7 +119,7 @@
     </ul>
     <p>
       This sensory feedback will enable more adaptive, compliant, and safe
-      manipulation strategies.
+      manipulation strategies across varied object types.
     </p>
   </section>
 
@@ -106,21 +127,20 @@
   <section>
     <h2>Control Philosophy</h2>
     <p>
-      True dexterity requires tight integration between mechanics, sensing,
-      and control. The long-term vision for this system is closed-loop,
-      sensor-driven control that continuously adjusts finger motion based
-      on real-world feedback.
+      True dexterity requires tight integration between mechanics, sensing, and
+      control. The long-term vision for this system is closed-loop, sensor-driven
+      control that continuously adjusts finger motion based on real-world feedback.
     </p>
     <p>
-      Rather than relying solely on predefined grasps, the goal is to allow
-      the hand to adapt dynamically to objects, uncertainty, and external
-      disturbances — much like a human would.
+      Rather than relying solely on predefined grasps, the goal is to allow the
+      hand to adapt dynamically to objects, uncertainty, and external disturbances
+      &mdash; much like a human would when handling an unexpected object.
     </p>
   </section>
 
-  <!-- FUTURE WORK -->
+  <!-- FUTURE -->
   <section>
-    <h2>Future Development & Research Directions</h2>
+    <h2>Future Development &amp; Research Directions</h2>
     <ul>
       <li>Refined finger kinematics for increased range of motion</li>
       <li>High-resolution tactile sensor arrays across fingertips and palm</li>
